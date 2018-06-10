@@ -10,8 +10,8 @@ import javax.ws.rs.core.UriBuilder;
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import com.genesislab.smart.utility.WSRequestMapper;
-import com.genesislab.smart.utility.WSSecurityManager;
+import com.genesislab.webservice.handle.WSRequestMapper;
+import com.genesislab.webservice.handle.WSSecurityManager;
 import com.sun.net.httpserver.HttpServer;
 
 public class ServerlLauncher {
@@ -19,13 +19,13 @@ public class ServerlLauncher {
 	HttpServer httpserver;
 
 	public void launch() throws IOException {
-		System.out.println("Starting Crunchify's Embedded Jersey HTTPServer...\n");
-		HttpServer crunchifyHTTPServer = createHttpServer();
+		System.out.println("Starting Smart Shopping Embedded Jersey HTTPServer...\n");
+		HttpServer smartShoppingServer = createHttpServer();
 		//crunchifyHTTPServer.start();
 		System.out.println(
 				String.format("\nJersey Application Server started with WADL available at " + "%sapi",
 						baseURL()));
-		System.out.println("Started Crunchify's Embedded Jersey HTTPServer Successfully !!!");
+		System.out.println("Started Smart Shopping Embedded Jersey HTTPServer Successfully !!!");
 
 	}
 
